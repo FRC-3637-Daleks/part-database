@@ -10,8 +10,9 @@
 
 using namespace std;
 
-class Part
+struct Part
 {
+public:
     int partNum;
     string partName;
     int qty;
@@ -19,14 +20,16 @@ class Part
     double price;
     string producer;
     string description;
-public:
+
     Part();
-    void add();
-    Part get();
-    void modify();
-    string search();
+    string toString();
     
 };
+
+// Global Methods
+void add();
+Part get();
+string search();
 
 int main(int argc, char** argv) {
 
