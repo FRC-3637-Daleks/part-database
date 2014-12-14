@@ -8,23 +8,26 @@
 #include <cstdlib>
 #include <iostream>
 
+#include "part.h"
+#include "partConverter.h"
+
 using namespace std;
 
-struct Part
-{
-public:
-    int partNum;
-    string partName;
-    int qty;
-    string partType;
-    double price;
-    string producer;
-    string description;
-
-    Part();
-    string toString();
-    
-};
+//struct Part
+//{
+//public:
+//    int partNum;
+//    string partName;
+//    int qty;
+//    string partType;
+//    double price;
+//    string producer;
+//    string description;
+//
+//    Part();
+//    string toString();
+//    
+//};
 
 // Global Methods
 void add();
