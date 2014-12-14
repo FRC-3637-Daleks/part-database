@@ -8,18 +8,20 @@
 #ifndef PART_H
 #define	PART_H
 
+using namespace std;
+
 struct Part
 {
 public:
-    int partNum;
-    char* partName;
+    string id;
+    string partName;
     int qty;
-    char* partType;
+    string partType;
     double price;
-    char* producer;
-    char* description;
+    string producer;
+    string description;
 
-    Part();
+    //Part();
     string toString();
     
 };

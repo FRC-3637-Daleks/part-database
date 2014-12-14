@@ -8,9 +8,11 @@
 #ifndef PARTCONVERTER_H
 #define	PARTCONVERTER_H
 
-Part strToPart(char*);
+using namespace std;
 
-char* partToStr(Part);
+Part stringToPart(std::string);
+
+string partToString(Part);
 
 #endif	/* PARTCONVERTER_H */
 
