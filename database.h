@@ -8,11 +8,11 @@
 #ifndef DATABASE_H
 #define	DATABASE_H
 
-// Add one or more parts to the database file, keeping others there. Returns 1 if successfull, 0 if not(ran out of space?)
+// Add one or more parts to the database file, keeping others there. Returns 1 if successfull, 0 if there was an error
 int add(Part);
 int add(Part*);
 
-// Write all of these parts to the database file, overwriting others. Returns 1 if successfull, 0 if not(ran out of space?)
+// Write all of these parts to the database file, overwriting others. Returns 1 if successfull, 0 if there was an error
 int write(Part*);
 
 // Get array of all parts currently in the database file
@@ -21,11 +21,14 @@ Part* read();
 // Check if a part exists. 1 = true, 0 = false
 int exists(Part);
 
-// Remove a part from the database file. Returns 1 if successfull, 0 if not(not in the file?)
+// Remove a part from the database file. Returns 1 if successfull, 0 if the part was not found
 int remove(Part);
 
 // Clear the database file, leaving nothing left
 void clear();
+
+// Set the database file to be used. Returns 1 if successfull, 0 if there was an error opening the file.
+int setFile(char*);
 
 #endif	/* DATABASE_H */
 
