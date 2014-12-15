@@ -1,6 +1,6 @@
 /* 
  * File:   partConverter.h
- * Author: rich
+ * Author: tim
  *
  * Created on December 14, 2014, 9:37 AM
  */
@@ -10,7 +10,7 @@
 
 using namespace std;
 
-Part stringToPart(std::string);
+Part stringToPart(string);
 
 string partToString(Part);
 

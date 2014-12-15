@@ -1,6 +1,6 @@
 /* 
  * File:   part.h
- * Author: rich
+ * Author: tim
  *
  * Created on December 14, 2014, 9:38 AM
  */

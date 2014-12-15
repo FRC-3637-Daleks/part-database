@@ -37,23 +37,6 @@ string search();
 
 int main(int argc, char** argv) {
     
-    // Testing for partToString()
-    
-    Part testPart;
-    testPart.description = "TestDescription";
-    testPart.id = "ABC123";
-    testPart.partName = "TestPart";
-    testPart.partType = "Test";
-    testPart.price = 100;
-    testPart.producer = "TestPartsUSA";
-    testPart.qty = 5;
-    
-    string partStr;
-    
-    partStr = partToString(testPart);
-    
-    printf("%s", partStr.c_str());
-    
     return 0;
 }
 

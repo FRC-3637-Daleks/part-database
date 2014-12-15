@@ -1,6 +1,6 @@
 /* 
  * File:   chars.h
- * Author: rich
+ * Author: tim
  *
  * Created on December 14, 2014, 10:05 AM
  */
@@ -13,9 +13,9 @@
 
 #ifdef DEBUG
 
-#define UNIT_SEPARATOR "[US]"
-#define GROUP_SEPARATOR "[GS]"
-#define RECORD_SEPARATOR "[RS]"
+#define UNIT_SEPARATOR '|'
+#define GROUP_SEPARATOR '#'
+#define RECORD_SEPARATOR '$'
 
 #else
 
