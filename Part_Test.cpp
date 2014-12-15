@@ -47,6 +47,14 @@ string Part::toString()
 }
 
 // Global Methods
+
+void add(Part newPart) // Adds newly created part to the database
+{
+    
+};
+Part get(); //Searches id or name
+Part search(); //Should return list of all parts that match arguments, return vector of part pointers
+
 void command(char str[]) //Accepts string that contains command and all information
 {
     int size = strlen(str) + 1;         // Makes a copy of the information so that we can modify it
@@ -71,6 +79,7 @@ void command(char str[]) //Accepts string that contains command and all informat
             }                                   //
             
             Part part1 (info[0], info[1], atoi(info[2].c_str()), info[3], atof(info[4].c_str()), info[5], info[6]);
+            add(part1);
             //Creates a new Part
             break;
         }
@@ -87,18 +96,18 @@ void command(char str[]) //Accepts string that contains command and all informat
         case 'G':
         {
             text[0] = '!';
+            get();
             break;
         }
         case 'S':
         {
             text[0] = '!';
+            search();
             break;
         }
     }
 };
-void add(); //Creates a new part
-Part get(); //Searches id or name
-Part search(); //Should return list of all parts that match arguments, return vector of part pointers
+
 
 int main(int argc, char** argv)
 {
