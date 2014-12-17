@@ -52,8 +52,22 @@ void add(Part newPart) // Adds newly created part to the database
 {
     
 };
-Part get(); //Searches id or name
-Part search(); //Should return list of all parts that match arguments, return vector of part pointers
+void modify(string num, string name, int newQty, string type, double newPrice, string prod, string desc)
+{
+    
+};
+void remove(string info)
+{
+    
+};
+Part get(string info)
+{
+    
+}; //Searches id or name
+Part search()
+{
+    
+}; //Should return list of all parts that match arguments, return vector of part pointers
 
 void command(char str[]) //Accepts string that contains command and all information
 {
@@ -86,23 +100,42 @@ void command(char str[]) //Accepts string that contains command and all informat
         case 'M':
         {
             text[0] = '!';
+            string info[7];                     // Breaks list of characters into tokens and puts it into an array 
+            char * tok;
+            tok = strtok (text, "!¥");
+            for (int i = 0; tok != NULL; i++)
+            {
+                info[i] = tok;
+                tok = strtok (NULL, "!¥");
+            }                                   //
+            modify(info[0], info[1], atoi(info[2].c_str()), info[3], atof(info[4].c_str()), info[5], info[6]);
             break;
         }
         case 'D':
         {
             text[0] = '!';
+            char * tok;
+            tok = strtok (text, "!¥");
+            string newInfo = tok;
+            remove(newInfo);
             break;
         }
         case 'G':
         {
             text[0] = '!';
-            get();
+            char * tok;
+            tok = strtok (text, "!¥");
+            string newInfo = tok;
+            get(newInfo);
             break;
         }
         case 'S':
         {
             text[0] = '!';
-            search();
+            char * tok;
+            tok = strtok (text, "!¥");
+            string newInfo = tok;
+            search(newInfo);
             break;
         }
     }
