@@ -1,0 +1,2 @@
+123ABC|Test Part|10|Testing|5|Test Parts USA|A Part for testing$
+456DEF|Test Part 2|2|Testing|6|Test Parts USA|A Part for testing$

@@ -27,8 +27,11 @@ int remove(Part);
 // Clear the database file, leaving nothing left
 void clear();
 
-// Set the database file to be used. Returns 1 if successfull, 0 if there was an error opening the file.
-int setFile(char*);
+// Open the database file to be used. Returns 1 if successfull, 0 if there was an error opening the file.
+int openFile(char*);
+
+// Close the database file
+int closeFile();
 
 #endif	/* DATABASE_H */
 
